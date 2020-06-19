@@ -9,8 +9,8 @@ namespace BLL
 {
     public class BeneficiarioService
     {
-        BeneficiarioRepository beneficiarioRepository;
-        Beneficiario beneficiario;
+        BeneficiarioRepository beneficiarioRepository = new BeneficiarioRepository();
+        Beneficiario beneficiario;  
         public RespuestaConsulta CargarArchivo(string FileStream)
         {
             RespuestaConsulta respuestaConsulta = new RespuestaConsulta();

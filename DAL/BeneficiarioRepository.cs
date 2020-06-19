@@ -10,31 +10,38 @@ namespace DAL
 {
     public class BeneficiarioRepository
     {
-        
-        public List<Beneficiario> CargarArchivo(string FileStream)
+        List<Beneficiario> lBeneficiario = new List<Beneficiario>();
+        int cantidadLinea;
+        public List<Beneficiario> CargarArchivo(string filename)
         {
-
-            List<Beneficiario> lBeneficiario = new List<Beneficiario>();
             string linea;
+            cantidadLinea = 1;
 
-            TextReader lector;
-            lector = new StreamReader(FileStream);
-
-            while ((linea = lector.ReadLine()) != null)
+            FileStream SourceStream = new FileStream(filename, FileMode.OpenOrCreate, FileAccess.Read);
+            StreamReader Reader = new StreamReader(SourceStream);
+            
+            while ((linea = Reader.ReadLine()) != null)
             {
-                Beneficiario beneficiario = new Beneficiario();
-                char delimitador = ';';
-                string[] arrayPersona = linea.Split(delimitador);
-
-                beneficiario.CodigoProveedor = arrayPersona[0];
-                beneficiario.Cedula = arrayPersona[1];
-                beneficiario.NombreBeneficiario = arrayPersona[2];
-                beneficiario.Fecha = arrayPersona[3];
-                beneficiario.ValorAyuda = Convert.ToDouble(arrayPersona[4]);
+                Beneficiario beneficiario = MapearCarga(linea);
                 lBeneficiario.Add(beneficiario);
+                cantidadLinea ++;
             }
-            lector.Close();
+
             return lBeneficiario;
+        }
+        public Beneficiario MapearCarga(string linea)
+        {
+            char delimitador = ';';
+            string[] arrayBeneficiario = linea.Split(delimitador);
+            Beneficiario beneficiario = new Beneficiario();
+
+            beneficiario.CodigoProveedor = arrayBeneficiario[0];
+            beneficiario.Cedula = arrayBeneficiario[1];
+            beneficiario.NombreBeneficiario = arrayBeneficiario[2];
+            beneficiario.Fecha = arrayBeneficiario[3];
+            beneficiario.ValorAyuda = Convert.ToDouble(arrayBeneficiario[4]);
+
+            return beneficiario;
         }
     }
 
