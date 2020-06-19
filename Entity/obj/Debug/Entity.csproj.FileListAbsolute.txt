@@ -1,0 +1,5 @@
+C:\Users\Orlando Rojano\source\repos\Parcial03\Entity\bin\Debug\Entity.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\Entity\bin\Debug\Entity.pdb
+C:\Users\Orlando Rojano\source\repos\Parcial03\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\Orlando Rojano\source\repos\Parcial03\Entity\obj\Debug\Entity.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\Entity\obj\Debug\Entity.pdb

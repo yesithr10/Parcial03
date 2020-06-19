@@ -1,0 +1,8 @@
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\bin\Debug\DAL.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\bin\Debug\DAL.pdb
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\bin\Debug\Entity.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\bin\Debug\Entity.pdb
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\obj\Debug\DAL.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\DAL\obj\Debug\DAL.pdb

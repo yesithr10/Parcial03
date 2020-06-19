@@ -1,0 +1,16 @@
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\Parcial03.exe.config
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\Parcial03.exe
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\Parcial03.pdb
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\BLL.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\Entity.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\DAL.dll
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\BLL.pdb
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\Entity.pdb
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\bin\Debug\DAL.pdb
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\obj\Debug\Parcial03.csprojAssemblyReference.cache
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\obj\Debug\Parcial03.Form1.resources
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\obj\Debug\Parcial03.Properties.Resources.resources
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\obj\Debug\Parcial03.csproj.GenerateResource.cache
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\obj\Debug\Parcial03.csproj.CopyComplete
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\obj\Debug\Parcial03.exe
+C:\Users\Orlando Rojano\source\repos\Parcial03\Parcial03\obj\Debug\Parcial03.pdb
