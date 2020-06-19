@@ -13,11 +13,11 @@ namespace Parcial03
 {
     public partial class Form1 : Form
     {
-        BeneficiarioService beneficiarioService = new BeneficiarioService();
+        BeneficiarioService beneficiarioService;
         public Form1()
         {           
             InitializeComponent();
-            
+            beneficiarioService = new BeneficiarioService(ConfigConnection.ConnectionString);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,15 +44,31 @@ namespace Parcial03
 
             string filename = "";
 
+           
+
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 filename = openFileDialog.FileName;
+                string ruta = openFileDialog.FileName;
+                string codigoProvedor = cmbEntidad.Text;
+                string fecha = FechaDatetime.Value.ToString("dd/MM/yyyy");
 
                 if (filename != "")
                 {
-                    RespuestaConsulta respuestaConsulta = beneficiarioService.CargarArchivo(filename);        
+                    RespuestaConsulta respuestaConsulta = beneficiarioService.CargarArchivo(filename);
                     MessageBox.Show(respuestaConsulta.Mensaje, "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    foreach (var item in respuestaConsulta.Liquidacion)
+                    {
+                        if(beneficiarioService.Cargar(ruta, codigoProvedor, fecha).Equals(true))
+                        {
+                        beneficiarioService.Guardar(item);
+                        }
+                        else
+                        {
+                        beneficiarioService.GuardarGlosas(item);
+                        }
+                        
+                    }
                 }
                 else
                 {
@@ -63,5 +79,7 @@ namespace Parcial03
                 }
             }
         }
+        
+
     }
 }

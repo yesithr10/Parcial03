@@ -12,4 +12,5 @@ namespace Parcial03
         public static string ConnectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         public static string ProviderName = ConfigurationManager.ConnectionStrings["DefaultConnection"].ProviderName;
     }
+    
 }

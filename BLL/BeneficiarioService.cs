@@ -9,14 +9,20 @@ namespace BLL
 {
     public class BeneficiarioService
     {
-        BeneficiarioRepository beneficiarioRepository = new BeneficiarioRepository();
-        Beneficiario beneficiario;  
+        private readonly ConnectionManager conexion;
+        private readonly BeneficiarioRepository repositorio;
+        public BeneficiarioService(string connectionString)
+        {
+            conexion = new ConnectionManager(connectionString);
+            repositorio = new BeneficiarioRepository(conexion);
+        }
+
         public RespuestaConsulta CargarArchivo(string FileStream)
         {
             RespuestaConsulta respuestaConsulta = new RespuestaConsulta();
             try
             {
-                respuestaConsulta.Liquidacion = beneficiarioRepository.CargarArchivo(FileStream);
+                respuestaConsulta.Liquidacion = repositorio.CargarArchivo(FileStream);
                 respuestaConsulta.Error = false;
                 respuestaConsulta.Mensaje = "Cargado Correctamente";
                 return respuestaConsulta;
@@ -29,8 +35,60 @@ namespace BLL
             }
             
         }
+        public string Guardar(Beneficiario beneficiario)
+        {
+            try
+            {
+                conexion.Open();
+                repositorio.Guardar(beneficiario);
+                return $"Se guardaron los datos satisfactoriamente";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { conexion.Close(); }
+        }
+        public string GuardarGlosas(Beneficiario beneficiario)
+        {
+            try
+            {
+                conexion.Open();
+                repositorio.GuardarGlosas(beneficiario);
+                return $"Se guardaron los datos satisfactoriamente";
+            }
+            catch (Exception e)
+            {
+                return $"Error de la Aplicacion: {e.Message}";
+            }
+            finally { conexion.Close(); }
+        }
+        public bool Cargar(string ruta, string codigoProveedor, string fecha)
+        {
+
+            try
+            {
+                conexion.Open();
+                return repositorio.GuardarConValidacion(ruta, codigoProveedor, fecha);
+            }
+            catch (Exception e)
+            {
+
+                return false;
+            }
+            finally
+            {
+                conexion.Close();
+            }
+
+
+        }
     }
+
+
     
+
+
     public class RespuestaConsulta
     {
         public bool Error;

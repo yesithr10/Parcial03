@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEntidad = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaDatetime = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,18 +44,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Entidad: ";
             // 
-            // comboBox1
+            // cmbEntidad
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Almacen Exito",
-            "Olimpica",
-            "Mi futuro"});
-            this.comboBox1.Location = new System.Drawing.Point(198, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cmbEntidad.FormattingEnabled = true;
+            this.cmbEntidad.Items.AddRange(new object[] {
+            "001",
+            "621",
+            "013"});
+            this.cmbEntidad.Location = new System.Drawing.Point(198, 39);
+            this.cmbEntidad.Name = "cmbEntidad";
+            this.cmbEntidad.Size = new System.Drawing.Size(121, 21);
+            this.cmbEntidad.TabIndex = 1;
+            this.cmbEntidad.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -66,12 +66,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Fecha de carga: ";
             // 
-            // dateTimePicker1
+            // FechaDatetime
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(198, 95);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.FechaDatetime.Location = new System.Drawing.Point(198, 95);
+            this.FechaDatetime.Name = "FechaDatetime";
+            this.FechaDatetime.Size = new System.Drawing.Size(200, 20);
+            this.FechaDatetime.TabIndex = 3;
             // 
             // button1
             // 
@@ -89,9 +89,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 154);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.FechaDatetime);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEntidad);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -104,9 +104,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbEntidad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaDatetime;
         private System.Windows.Forms.Button button1;
     }
 }

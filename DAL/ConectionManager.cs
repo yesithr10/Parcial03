@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Entity;
 namespace DAL
 {
-    class ConnectionManager
+    public class ConnectionManager
     {
         internal SqlConnection _conexion;
         public ConnectionManager(string connectionString)
